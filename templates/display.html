@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Student Grades</title>
+    <link rel="stylesheet" type="text/css" href="static/design.css">
+
+</head>
+<body>
+    <h1 style="padding-left: 20px;">Student Grades</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Grade</th>
+                <tbody>
+                    {% for row in data %}
+                    <tr>
+                        <td>{{ row.ID }}</td>
+                        <td>{{ row.Grade }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row.ID }}</td>
+                <td>{{ row.Grade }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p style="padding-left: 20px;">Average Grade: {{ average_grade }}</p>
+    <a style="padding-left: 20px;" href="/enter">Enter More Grades</a>
+</body>
+</html>

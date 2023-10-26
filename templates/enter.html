@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Grades</title>
+    <link rel="stylesheet" type="text/css" href="static/design.css">
+</head>
+<body>
+    <h1 style="text-align:center; padding-top: 50px;">Enter Student Grades</h1>
+    
+    <form style="text-align:center;" method="POST" action="/enter">
+        <label for="student_id">Student ID:</label>
+        <input type="number" id="student_id" name="student_id" required><br>
+        <p></p>
+        <label for="grade">Grade:</label>
+        <input type="number" id="grade" name="grade" step="0.01" required><br>
+         <p></p>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p style="text-align:center;"><a href="/display">View All Grades</a></p>
+</body>
+</html>
+
+
